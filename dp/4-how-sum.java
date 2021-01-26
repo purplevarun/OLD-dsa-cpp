@@ -1,5 +1,5 @@
 import java.util.*;
-class howSum{
+class howsum{
 	public static void main(String[] args) {
 		int n = Integer.parseInt(args[0]);
 		int a[]=new int[args.length-1];
@@ -7,14 +7,16 @@ class howSum{
 			a[i++] = Integer.parseInt(args[j]);
 		int size = args.length-1;
 		Arrays.sort(a); reverse(a);
-		System.out.println(howsum(n,a,new HashMap<Integer,ArrayList<Integer>>()));
+		HashMap<Integer,ArrayList<Integer>> dp = new HashMap<>();
+		System.out.println(howSum(n,a,dp));
+		// System.out.println(dp);
 	}
-	static ArrayList<Integer> howsum(int n,int a[],HashMap<Integer,ArrayList<Integer>> dp){
+	static ArrayList<Integer> howSum(int n,int a[],HashMap<Integer,ArrayList<Integer>> dp){
 		if (dp.containsKey(n)) return dp.get(n);
 		if (n==0) return new ArrayList<Integer>();	
 		if (n<0) return null;
 		for (int i:a){
-			ArrayList<Integer> result = howsum(n-i,a,dp);
+			ArrayList<Integer> result = howSum(n-i,a,dp);
 			if(result!=null){
 				result.add(i);
 				dp.put(n,result);
