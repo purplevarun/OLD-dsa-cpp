@@ -9,7 +9,7 @@ class grid1{
 	static long grid(int n,int m,long[][] dp){
 		if(dp[n][m]!=-1) return dp[n][m];
 		if (n==0 || m==0)
-			return 0;
+			return 1;
 		
 		if (n==1 && m==1)
 			return 1;
