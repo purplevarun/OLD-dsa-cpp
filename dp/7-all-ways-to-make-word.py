@@ -9,7 +9,6 @@ def allWays(target,wordBank,dp={}):
 			result=result+ways
 	return result		
 if __name__ == '__main__':
-	
 	s1 = "abcd"
 	s2 = "abcdefgh"
 	s3 = "e"*10+"f"
