@@ -1,4 +1,4 @@
-def spiralTraversal(matrix) :
+def spiralTraversal(matrix) -> list :
     rows = len(matrix)
     cols = len(matrix[0])
     result = []
@@ -15,12 +15,14 @@ def spiralTraversal(matrix) :
 
         # add last row 
         if x < rows : 
-            for i in range (cols-1, y-1, -1) : result.append (a[rows-1][i])
+            for i in range (cols-1, y-1, -1) : result.append (matrix[rows-1][i])
             rows -= 1
         
         # add first column
-        
-        
+        if y < cols :
+            for i in range (rows-1, x-1, -1) : result.append (matrix[i][y])
+            y += 1
+    return result
 
 matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 print (spiralTraversal(matrix))
