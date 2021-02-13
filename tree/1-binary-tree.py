@@ -13,27 +13,26 @@ def inorder(root):
     inorder (root.left)
     print (root.value, end=" ")
     inorder (root.right)
-def insertBST(root,x):
+def insert(root,x):
     if root == None : 
         root = node (x)
         return root
     if x < root.value :
-        root.left = insertBST (root.left,x)
+        root.left = insert (root.left,x)
     else : 
-        root.right = insertBST (root.right,x)
+        root.right = insert (root.right,x)
     return root
-def insert(root,x):
-    if root == None :
-        root = node (x)
-        return
-    
+
 # -------------------------------------------------------
 
 root = None
 
-root = insertBST(root,5)
-root = insertBST(root,3)
-root = insertBST(root,4)
-root = insertBST(root,1)
-root = insertBST(root,10)
+root = insert(root,5)
+root = insert(root,3)
+root = insert(root,4)
+root = insert(root,1)
+root = insert(root,10)
+
 inorder(root)
+print()
+preorder(root)
