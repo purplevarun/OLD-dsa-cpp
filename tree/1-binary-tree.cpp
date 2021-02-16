@@ -49,7 +49,6 @@ node* insert (node* root, int x) {
 int main () {
     node* root;
     for (int i = 1;i<=7;i++) root = insert(root,i);
-    preorder (root);
-    cout << '\n' << endl;
-    inorder (root);
+    cout << "preorder = "; preorder (root);
+    cout << "\ninorder = "; inorder (root);
 }
