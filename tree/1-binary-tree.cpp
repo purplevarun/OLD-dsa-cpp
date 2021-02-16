@@ -47,11 +47,7 @@ node* insert (node* root, int x) {
     return root;
 }
 int main () {
-    node* root = null;
-    // root = new node (3);
-    // root -> left = new node (5);
-    // root -> right = new node (2);
-    // root -> right -> left = new node (10);
+    node* root;
     for (int i = 1;i<=7;i++) root = insert(root,i);
     preorder (root);
     cout << '\n' << endl;
