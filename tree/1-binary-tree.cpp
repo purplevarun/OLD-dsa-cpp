@@ -22,13 +22,38 @@ void inorder (node* root){
     cout << root -> value << " ";
     inorder (root -> right);
 }
+node* insert (node* root, int x) {
+    if (root == null) {
+        root = new node (x);
+    }
+    else {
+        queue <node*> q;
+        q.push (root);
+        while (q.empty() == false) {
+            node* temp = q.front ();
+            q.pop ();
+            if (temp -> left == null) {
+                temp -> left = new node (x);
+                break;
+            }
+            else q.push (temp -> left);
+            if (temp -> right == null) {
+                temp -> right = new node (x);
+                break;
+            }
+            else q.push (temp -> right);
+        }
+    }
+    return root;
+}
 int main () {
     node* root = null;
-    root = new node (3);
-    root -> left = new node (5);
-    root -> right = new node (2);
-    root -> right -> left = new node (10);
+    // root = new node (3);
+    // root -> left = new node (5);
+    // root -> right = new node (2);
+    // root -> right -> left = new node (10);
+    for (int i = 1;i<=7;i++) root = insert(root,i);
     preorder (root);
-    cout << endl << endl;
+    cout << '\n' << endl;
     inorder (root);
 }
