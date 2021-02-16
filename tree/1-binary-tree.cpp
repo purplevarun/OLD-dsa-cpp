@@ -11,8 +11,6 @@ class node {
     }
 };
 int main () {
-    node* root = new node(5);
-    cout << root << endl;
-    cout << root->value << endl;
-    cout << root->left << endl;
+    node* root = null;
+    
 }
