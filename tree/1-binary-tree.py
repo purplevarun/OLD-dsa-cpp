@@ -22,13 +22,13 @@ def printGivenLevel (root,L):
     if not root: return 
     if L == 1: 
         if root.left != None and root.right != None:
-            print (root.value,"L",root.left.value,"R",root.right.value)
+            print (root.value,"L",root.left.value,", R",root.right.value)
         elif root.left != None:
-            print (root.value,"L",root.left.value,"R","None")
+            print (root.value,"L",root.left.value,", R","N")
         elif root.right != None:
-            print (root.value,"L","N","R",root.right.value)
+            print (root.value,"L","N",", R",root.right.value)
         else :
-            print (root.value,"L","N","R","N")
+            print (root.value,"L","N",", R","N")
     else :
         printGivenLevel (root.left,L-1)
         printGivenLevel (root.right,L-1) 
@@ -57,5 +57,5 @@ def insert (root, x):
             else: q.append (temp.right)
     return root
 root = None
-for i in range (1,4): root = insert (root, i)
+for i in range (1,7+1): root = insert (root, i)
 display(root)
