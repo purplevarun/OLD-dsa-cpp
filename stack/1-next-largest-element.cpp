@@ -17,8 +17,9 @@ void print (vi X){
 }
 signed main () {
     // vi A {1,3,2,4}; // TC 1 Answer = {3,4,4,-1}
-    vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {3,4,1,1,2,4,-1}
+    // vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {3,4,1,1,2,4,-1}
     // vi A {3,2,1}; // TC 3 Answer = {-1,-1,-1}
+    vi A {17,18,5,4,6,1}; // TC 4 Answer = {18,-1,6,6,-1,-1}
     int N = A.size();
     vi Result;
     //-------------------------
