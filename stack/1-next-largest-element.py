@@ -5,7 +5,13 @@ N = len (A)
 # ----------------------------------------------
 Result = []
 stack = []
-for i in range (N-1,-1,-1): print (A[i])
+for i in range (N-1,-1,-1):
+    if stack == []: # stack is empty
+        Result.append(-1)
+        stack.append(A[i])
+        continue
+    top = stack [len(stack)-1]
+    
 # ----------------------------------------------
 # BRUTE FORCE
 # Result = []
