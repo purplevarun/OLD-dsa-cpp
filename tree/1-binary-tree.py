@@ -21,14 +21,21 @@ def printGivenLevel (root,L):
     # print ("root value = {}".format(root.value), "level = ",L)
     if not root: return 
     if L == 1: 
-        print ()
+        if root.left != None and root.right != None:
+            print (root.value,"L",root.left.value,"R",root.right.value)
+        elif root.left != None:
+            print (root.value,"L",root.left.value,"R","None")
+        elif root.right != None:
+            print (root.value,"L","N","R",root.right.value)
+        else :
+            print (root.value,"L","N","R","N")
     else :
         printGivenLevel (root.left,L-1)
         printGivenLevel (root.right,L-1) 
 def display (root):
     h = height (root)
     for i in range(1,h+1):
-        printGivenLevel (root,h)
+        printGivenLevel (root,i)
 def insert (root, x):
     if not root: 
         root = node (x)
