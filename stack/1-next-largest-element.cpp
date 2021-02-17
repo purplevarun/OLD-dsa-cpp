@@ -3,7 +3,9 @@ using namespace std;
 #define int long long int
 #define null nullptr
 #define vi vector <int>
+#define all(x) x.begin(),x.end()
 void print (vi X){
+    if (X.size()==0) return;
     for (int i=0;i<X.size()-1;i++)
         cout << X[i] << ", ";
     cout << X[X.size()-1] << endl;
@@ -16,7 +18,23 @@ signed main () {
     int N = A.size();
     vi Result;
     //-------------------------
-    
+    stack <int> s;
+    for (int i=N-1;i>=0;i--) {
+        if (s.empty()) 
+            Result.push_back(-1);
+        else if (s.size() > 0 && s.top() > A[i])
+            Result.push_back(s.top());
+        else if (s.size() >0 && s.top() <= A[i]) {
+            while (s.size() > 0 && s.top() <= A[i])
+                s.pop();
+            if (s.empty())
+                Result.push_back(-1);
+            else Result.push_back(s.top());
+        }
+        s.push(A[i]);
+    }
+    reverse (all(Result));
+    print (Result);
     //-------------------------
     // Brute Force
     // for (int i=0;i<N;i++) {
