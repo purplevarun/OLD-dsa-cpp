@@ -4,5 +4,5 @@
 3. brute force is O(n2)  
     i : 0 to N  
     j : 0 to i or i to N  
-    This question can be optimised using stack.
+    ### This question can be optimised using stack.
     
