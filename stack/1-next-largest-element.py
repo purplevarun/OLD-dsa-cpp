@@ -10,7 +10,7 @@ A = [1,3,2,4] # result = [3,4,4,-1] # TC 1
 # for i in range (N):
 #     key = A[i]
 #     flag = False
-#     for j in range (i+1,N): 
+#     for j in range (i+1,N): # stack alert
 #         if A[j] > key:
 #             Result.append (A[j])
 #             flag = True
