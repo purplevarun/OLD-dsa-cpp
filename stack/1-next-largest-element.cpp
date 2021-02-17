@@ -4,5 +4,5 @@ using namespace std;
 #define null nullptr
 #define vi vector <int>
 signed main () {
-    cout << sizeof (int) << "," << sizeof (signed) <<endl;
+    
 }
