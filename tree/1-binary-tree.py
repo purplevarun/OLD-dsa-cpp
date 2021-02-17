@@ -31,4 +31,7 @@ def insert (root, x):
     return root
 root = None
 for i in range (1,7+1): root = insert (root, i)
+print ("inorder =",end=" ") 
 inorder(root)
+print ("preorder =",end=" ") 
+preorder(root)
