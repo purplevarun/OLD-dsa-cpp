@@ -10,25 +10,27 @@ void print (vi X){
 }
 signed main () {
     // Nearest greatest to the right
-    // vi A {1,3,2,4}; // TC 1 Answer = {3,4,4,-1}
+    vi A {1,3,2,4}; // TC 1 Answer = {3,4,4,-1}
     // vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {3,4,1,1,2,4,-1}
-    vi A {3,2,1}; // TC 3 Answer = {-1,-1,-1}
+    // vi A {3,2,1}; // TC 3 Answer = {-1,-1,-1}
     int N = A.size();
     vi Result;
     //-------------------------
+    
+    //-------------------------
     // Brute Force
-    for (int i=0;i<N;i++) {
-        int key = A[i];
-        bool check = false;
-        for (int j=i+1;j<N;j++) {
-            int X = A[j];
-            if (X > key) {
-                Result.push_back(X);
-                check = true;
-                break;
-            }
-        }
-        if (!check) Result.push_back(-1);
-    }
-    print (Result);
+    // for (int i=0;i<N;i++) {
+    //     int key = A[i];
+    //     bool check = false;
+    //     for (int j=i+1;j<N;j++) { // stack alert
+    //         int X = A[j];
+    //         if (X > key) {
+    //             Result.push_back(X);
+    //             check = true;
+    //             break;
+    //         }
+    //     }
+    //     if (!check) Result.push_back(-1);
+    // }
+    // print (Result);
 }
