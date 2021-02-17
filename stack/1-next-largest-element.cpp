@@ -25,15 +25,17 @@ signed main () {
     //-------------------------
     stack <int> s;
     for (int i=N-1;i>=0;i--) {
-        if (s.empty()) 
+        if (s.empty()) {
             Result.push_back(-1);
-        else if (s.size() > 0 && s.top() > A[i])
+        }
+        else if (s.size() > 0 && s.top() > A[i]) {
             Result.push_back(s.top());
+        }
         else if (s.size() >0 && s.top() <= A[i]) {
-            while (s.size() > 0 && s.top() <= A[i])
+            while (s.size() > 0 && s.top() <= A[i]){
                 s.pop();
-            if (s.empty())
-                Result.push_back(-1);
+            }
+            if (s.empty()) Result.push_back(-1);
             else Result.push_back(s.top());
         }
         s.push(A[i]);
