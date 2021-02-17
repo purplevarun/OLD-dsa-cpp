@@ -18,17 +18,16 @@ def height (root):
     if not root: return 0
     return 1 + max (height(root.left),height(root.right))
 def printGivenLevel (root,L):
-    # print ("root value = {}".format(root.value), "level = ",L)
     if not root: return 
     if L == 1: 
         if root.left != None and root.right != None:
-            print (root.value,"L",root.left.value,", R",root.right.value)
+            print ("{} L{} R{}".format(root.value,root.left.value,root.right.value))
         elif root.left != None:
-            print (root.value,"L",root.left.value,", R","N")
+            print ("{} L{} R{}".format(root.value,root.left.value,"-"))
         elif root.right != None:
-            print (root.value,"L","N",", R",root.right.value)
+            print ("{} L{} R{}".format(root.value,"-",root.right.value))
         else :
-            print (root.value,"L","N",", R","N")
+            print ("{} L{} R{}".format(root.value,"-","-"))
     else :
         printGivenLevel (root.left,L-1)
         printGivenLevel (root.right,L-1) 
