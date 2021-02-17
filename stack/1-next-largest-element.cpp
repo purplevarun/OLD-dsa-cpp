@@ -16,7 +16,7 @@ signed main () {
     int N = A.size();
     vi Result;
     //-------------------------
-    cout << & A[0] << "," << & A[2] <<endl;
+    
     //-------------------------
     // Brute Force
     // for (int i=0;i<N;i++) {
