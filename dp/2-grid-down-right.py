@@ -8,5 +8,6 @@ def path(n,m,dp):
 	dp[(n,m)] = path(n-1,m,dp) + path(n,m-1,dp)
 	return dp[(n,m)]
 if __name__ == '__main__':
-	n,m = [int(x) for x in input().split()]
+	# n,m = [int(x) for x in input().split()]
+	n,m = 100,26
 	print(path(n,m,dp={}))
