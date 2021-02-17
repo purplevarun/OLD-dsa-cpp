@@ -9,6 +9,11 @@ def inorder (root):
     inorder (root.left)
     print (root.value,end=" ")
     inorder (root.right)
+def preorder (root):
+    if not root: return
+    print (root.value,end=" ")
+    preorder (root.left)
+    preorder (root.right)
 def insert (root, x):
     if not root: 
         root = node (x)
@@ -33,5 +38,5 @@ root = None
 for i in range (1,7+1): root = insert (root, i)
 print ("inorder =",end=" ") 
 inorder(root)
-print ("preorder =",end=" ") 
+print ("\npreorder =",end=" ") 
 preorder(root)
