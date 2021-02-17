@@ -1,3 +1,8 @@
+/* 
+    Nearest greatest element to the right
+    ~ Varun Kedia
+    Stack Question 1
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
@@ -11,7 +16,6 @@ void print (vi X){
     cout << X[X.size()-1] << endl;
 }
 signed main () {
-    // Nearest greatest to the right
     // vi A {1,3,2,4}; // TC 1 Answer = {3,4,4,-1}
     vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {3,4,1,1,2,4,-1}
     // vi A {3,2,1}; // TC 3 Answer = {-1,-1,-1}
