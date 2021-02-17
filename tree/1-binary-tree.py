@@ -14,10 +14,15 @@ def preorder (root):
     print (root.value,end=" ")
     preorder (root.left)
     preorder (root.right)
+def height (root):
+    if not root: return 0
+    return 1 + max (height(root.left),height(root.right))
+def display (root):
+    pass
 def insert (root, x):
     if not root: 
         root = node (x)
-        return root
+        # return root
     else:
         q = [] # empty queue
         q.append(root)
@@ -35,8 +40,5 @@ def insert (root, x):
             else: q.append (temp.right)
     return root
 root = None
-for i in range (1,7+1): root = insert (root, i)
-print ("inorder =",end=" ") 
-inorder(root)
-print ("\npreorder =",end=" ") 
-preorder(root)
+for i in range (1,4): root = insert (root, i)
+print ("height = {}".format(height(root)))
