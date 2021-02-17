@@ -17,8 +17,18 @@ def preorder (root):
 def height (root):
     if not root: return 0
     return 1 + max (height(root.left),height(root.right))
+def printGivenLevel (root,L):
+    # print ("root value = {}".format(root.value), "level = ",L)
+    if not root: return 
+    if L == 1: 
+        print ()
+    else :
+        printGivenLevel (root.left,L-1)
+        printGivenLevel (root.right,L-1) 
 def display (root):
-    pass
+    h = height (root)
+    for i in range(1,h+1):
+        printGivenLevel (root,h)
 def insert (root, x):
     if not root: 
         root = node (x)
@@ -41,4 +51,4 @@ def insert (root, x):
     return root
 root = None
 for i in range (1,4): root = insert (root, i)
-print ("height = {}".format(height(root)))
+display(root)
