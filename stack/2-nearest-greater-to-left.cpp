@@ -16,4 +16,19 @@ void print (vi X){
 }
 signed main () {
     vi A {1,3,2,4}; // TC 1 Answer = {-1,-1,3,-1}
+    vi Result;
+    for (int i=0;i<n;i++) {
+        int key = A [i];
+        bool check = false;
+        int pos;
+        for (int j=0;j<i;j++) {
+            if (A[j]>key) {
+                check = true;
+                pos = j;
+            }
+        }
+        if (check) Result.append (A[pos]);
+        else Result.append (-1); 
+    }
+    print (Result);
 }
