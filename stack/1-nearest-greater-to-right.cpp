@@ -29,15 +29,18 @@ signed main () {
         if (s.empty()) {
             Result.push_back(-1);
         }
-        else if (s.size() > 0 && s.top() > A[i]) {
-            Result.push_back(s.top());
-        }
-        else if (s.size() >0 && s.top() <= A[i]) {
-            while (s.size() > 0 && s.top() <= A[i]){
-                s.pop();
+        else 
+        {
+            if (s.top() > A[i]) {
+                Result.push_back(s.top());
             }
-            if (s.empty()) Result.push_back(-1);
-            else Result.push_back(s.top());
+            else{
+                while (!s.empty() && s.top() <= A[i]){
+                    s.pop();
+                }
+                if (s.empty()) Result.push_back(-1);
+                else Result.push_back(s.top());
+            }
         }
         s.push(A[i]);
     }
