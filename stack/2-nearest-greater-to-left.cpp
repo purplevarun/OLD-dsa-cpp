@@ -15,6 +15,13 @@ void print (vi X){
         cout << X[i] << ", ";
     cout << X[X.size()-1] << endl;
 }
+void print (stack <int> S){
+    // cout << "Top = " << S.top() << endl;
+    while (S.empty() == false) {
+        cout << S.top () << endl;
+        S.pop();
+    }
+}
 signed main () {
     // vi A {1,3,2,4}; // TC 1 Answer = {-1,-1,3,-1}
     vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {-1,-1,3,3,3,3,-1}
@@ -41,6 +48,7 @@ signed main () {
             }
         }
         s.push(A[i]);
+
     }
     print (Result);
     // -------------------------------------
