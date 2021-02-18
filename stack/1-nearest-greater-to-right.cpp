@@ -1,5 +1,6 @@
 /* 
     Nearest greatest element to the right
+    // Next Largest Element
     ~ Varun Kedia
     Stack Question 1
 */
