@@ -15,20 +15,24 @@ void print (vi X){
     cout << X[X.size()-1] << endl;
 }
 signed main () {
-    vi A {1,3,2,4}; // TC 1 Answer = {-1,-1,3,-1}
+    // vi A {1,3,2,4}; // TC 1 Answer = {-1,-1,3,-1}
+    vi A {1,3,0,0,1,2,4}; // TC 2 Answer = {-1,-1,3,3,3,3,-1}
+    int N = A.size();
     vi Result;
-    for (int i=0;i<n;i++) {
-        int key = A [i];
-        bool check = false;
-        int pos;
-        for (int j=0;j<i;j++) {
-            if (A[j]>key) {
-                check = true;
-                pos = j;
-            }
-        }
-        if (check) Result.append (A[pos]);
-        else Result.append (-1); 
-    }
-    print (Result);
+    // -------------------------------------
+    // BRUTE FORCE
+    // for (int i=0;i<N;i++) {
+    //     int key = A [i];
+    //     bool check = false;
+    //     int pos;
+    //     for (int j=0;j<i;j++) {
+    //         if (A[j]>key) {
+    //             check = true;
+    //             pos = j;
+    //         }
+    //     }
+    //     if (check) Result.push_back (A[pos]);
+    //     else Result.push_back (-1); 
+    // }
+    // print (Result);
 }
