@@ -7,6 +7,7 @@ using namespace std;
 #define int long long int
 #define null nullptr
 #define vi vector <int>
+#define pb push_back
 #define all(x) x.begin(),x.end()
 void print (vi X){
     if (X.size()==0) return;
@@ -22,19 +23,39 @@ signed main () {
     int N = A.size();
     vi Result;
     // -------------------------------------
-    // BRUTE FORCE
-    for (int i=0;i<N;i++) {
-        int key = A [i];
-        bool check = false;
-        int pos;
-        for (int j=0;j<i;j++) {
-            if (A[j]>key) {
-                check = true;
-                pos = j;
+    stack <int> Stack;
+    for (int i=0;i<n;i++) {
+        if (Stack.empty()) {
+            Result.pb(-1);
+        }
+        else {
+            if (Stack.top() > A[i]){
+                Result.pb(Stack.top());
+            }
+            else {
+                while (Stack.empty()==false && Stack.top() <= A[i]){
+                    Stack.pop();
+                }
+                
             }
         }
-        if (check) Result.push_back (A[pos]);
-        else Result.push_back (-1); 
+        Stack.push(A[i]);
+        
     }
-    print (Result);
+    // -------------------------------------
+    // BRUTE FORCE
+    // for (int i=0;i<N;i++) {
+    //     int key = A [i];
+    //     bool check = false;
+    //     int pos;
+    //     for (int j=0;j<i;j++) { // stack alert
+    //         if (A[j]>key) {
+    //             check = true;
+    //             pos = j;
+    //         }
+    //     }
+    //     if (check) Result.push_back (A[pos]);
+    //     else Result.push_back (-1); 
+    // }
+    // print (Result);
 }
