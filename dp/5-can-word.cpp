@@ -16,11 +16,11 @@ bool canWord (string S, vs A) {
 }
 int32_t main () {
     // TC 1 - Yes
-    string S = "abcdef";
-    vs A {"ab","abc","cd","def","abcd"}; 
+    // string S = "abcdef";
+    // vs A {"ab","abc","cd","def","abcd"}; 
     // TC 2 - No
-    // string s = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef";
-    // vs A {"e","eeee","eeeeeeee","eeeeee"};
+    string S = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef";
+    vs A {"e","eeee","eeeeeeee","eeeeee"};
     if (canWord(S,A)) cout << "Yes";
     else cout << "No";
 }
