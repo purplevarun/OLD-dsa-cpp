@@ -8,10 +8,12 @@ using namespace std;
 void print (vi X) {
     int n = X.size();
     if (n == 1 && X[0] == -1) {cout << "Not Possible";return;}
-    for (int i=0;i<n;i++) cout << i << ", ";
+    for (int i=0;i<n-1;i++) cout << X[i] << ", ";
     cout << X[n-1];
 }
 vi howSum (int N, vi A) {
+    // cout << "\nA = " << endl;
+    print (A);
     if (N == 0) return {};
     if (N < 0) return {-1};
     for (int i:A) {
@@ -29,6 +31,8 @@ int32_t main () {
     // int N = 300; vi A {7,14}; // TC 3 Answer = Not Possible
     // int N = 100; vi A {2,48,1,3}; // TC 4 Answer = {48,48,3,1}
     sort (all(A));
-    vi result = howSum (N,A);
-    print (result);
+    reverse (all(A));
+    // vi result = howSum (N,A);
+    // print (result);
+    print (A);
 }
