@@ -7,15 +7,12 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 void print (vi X) {
     int n = X.size();
-    if (n == 0) {
-        cout << "Not Possible";
-        return;
-    }
+    if (n == 1 && X[0] == -1) {cout << "Not Possible";return;}
     for (int i=0;i<n;i++) cout << i << ", ";
     cout << X[n-1];
 }
 vi howSum (int N, vi A) {
-    return {};
+    return {-1};
 }
 int32_t main () {
     int N = 7; vi A {2,3}; // TC 1 Answer = {3,2,2}
