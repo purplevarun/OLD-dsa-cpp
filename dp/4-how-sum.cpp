@@ -6,9 +6,17 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 vi howSum (int N, vi A) {
-    // vi temp;
-    // if (N == 0) return temp;
-    return NULL;
+    vi temp;
+    if (N == 0) return temp;
+    if (N < 0) return {-1};
+    for (int i : A) {
+        vi B = howSum (N-i,A);
+        if (B != {-1}) {
+            B.pb(i);
+            return B;
+        }
+    }
+    return {-1};
 }
 int32_t main () {
     int N = 7; vi A {2,3}; // TC 1 Answer = {3,2,2}
