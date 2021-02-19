@@ -17,5 +17,4 @@ int path (int n, int m) {
 int32_t main (int32_t argc, char** argv) {
     int N = atoi (argv[1]), M = atoi (argv[2]);
     cout << path (N,M) << endl;
-    cout << "length = " << dp.size() << endl;
 }
