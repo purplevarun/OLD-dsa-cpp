@@ -19,7 +19,7 @@ int32_t main () {
     // string S = "abcdef";
     // vs A {"ab","abc","cd","def","abcd"}; 
     // TC 2 - No
-    string S = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef";
+    string S = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef";
     vs A {"e","eeee","eeeeeeee","eeeeee"};
     if (canWord(S,A)) cout << "Yes";
     else cout << "No";
