@@ -25,4 +25,5 @@ int32_t main () {
     int N = 300; vi A {7,14}; // TC 3 Answer = No
     if (canSum(N,A)) cout << "Yes";
     else cout << "No";
+
 }
