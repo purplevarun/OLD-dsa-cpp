@@ -6,7 +6,12 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 bool canSum (int target, vi arr) {
-        
+    if (target == 0) return true;
+    if (target < 0) return false;
+    for (int i:arr) {
+        if (canSum (target - i, arr)) return true;
+    }
+    return false;
 }
 int32_t main (int32_t argc, char** argv) {
     int target = atoi (argv[1]);
