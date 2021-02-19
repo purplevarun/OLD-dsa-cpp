@@ -7,6 +7,10 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 void print (vi X) {
     int n = X.size();
+    if (n == 0) {
+        cout << "Not Possible";
+        return;
+    }
     for (int i=0;i<n;i++) cout << i << ", ";
     cout << X[n-1];
 }
