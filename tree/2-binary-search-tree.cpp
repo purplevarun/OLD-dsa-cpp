@@ -26,24 +26,8 @@ node* insert (node* root, int x) {
     if (root == null) {
         root = new node (x);
     }
-    else {
-        queue <node*> q;
-        q.push (root);
-        while (q.empty() == false) {
-            node* temp = q.front ();
-            q.pop ();
-            if (temp -> left == null) {
-                temp -> left = new node (x);
-                break;
-            }
-            else q.push (temp -> left);
-            if (temp -> right == null) {
-                temp -> right = new node (x);
-                break;
-            }
-            else q.push (temp -> right);
-        }
-    }
+    else if (root -> value > x) root -> left = insert (root -> left, x);
+    else root -> right = insert (root -> right, x);
     return root;
 }
 int height (node* root) {
@@ -70,6 +54,9 @@ void display (node* root) {
 }
 int main () {
     node* root;
-    for (int i = 1;i<=7;i++) root = insert(root,i);
+    root = insert (root,5);
+    root = insert (root,3);
+    root = insert (root,7);
+    root = insert (root,4);
     display (root);
 }
