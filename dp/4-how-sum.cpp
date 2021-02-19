@@ -12,6 +12,15 @@ void print (vi X) {
     cout << X[n-1];
 }
 vi howSum (int N, vi A) {
+    if (N == 0) return {};
+    if (N < 0) return {-1};
+    for (int i:A) {
+        vi B = howSum (N-i,A);
+        if (B[0]!=-1){
+            B.pb(i);
+            return B;
+        }        
+    }
     return {-1};
 }
 int32_t main () {
