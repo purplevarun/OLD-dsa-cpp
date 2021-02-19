@@ -9,10 +9,10 @@ bool isWrong (vi X){
     if (X.size()==1 && (X[0] == -1))return true;
     return false;
 }
+vi empty;
+vi wrong {-1};
 map <int,vi> dp;
 vi howSum (int N, vi A) {
-    vi empty;
-    vi wrong {-1};
     if (dp.find(N)!=dp.end()) return dp[N];
     if (N == 0) return empty;
     if (N < 0) return wrong;
