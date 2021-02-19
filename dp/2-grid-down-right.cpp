@@ -14,7 +14,7 @@ int path (int n, int m) {
     dp[key] = path (n-1,m) + path (n,m-1);
     return dp[key];
 }
-int32_t main (int32_t argc, char** argv) {
-    int N = atoi (argv[1]), M = atoi (argv[2]);
+int32_t main () {
+    int N,M; cin >> N >> M;
     cout << path (N,M) << endl;
 }

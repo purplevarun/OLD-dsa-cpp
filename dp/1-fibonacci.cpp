@@ -10,9 +10,7 @@ int fibo (int n) {
     dp[n] = fibo (n-1) + fibo (n-2); // store answer in dp
     return dp[n];
 }
-int32_t main (int32_t argc, char** argv) {
-    int N;
-    if (argc <= 1) N = 50;
-    else N = atoi(argv [1]);
+int32_t main () {
+    int N; cin >> N;
     cout << N << "th fibonacci number = " << fibo ( N ) << endl;
 }
