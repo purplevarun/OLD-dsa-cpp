@@ -1,3 +1,7 @@
+/*
+    Nearest Smaller to Left
+    Stack Question 3
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
