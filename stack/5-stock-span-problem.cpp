@@ -18,6 +18,7 @@ int32_t main () {
     // ---------------------------------------
     // USE : Nearest Greater to left. index of i - index of nearest greater to left.
     stack <int> s;
+    vi idx; // to store index of Nearest greater to left
     for (int i=0;i<N;i++) {
         
         s.push(A[i]);
