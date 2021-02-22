@@ -20,27 +20,26 @@ int32_t main () {
     // ---------------------------------------
     // USE : Nearest Greater to left. index of i - index of nearest greater to left.
     stack < pair <int,int> > s;
-    vi idx; // to store index of Nearest greater to left
     for (int i=0;i<N;i++) {
         if (s.empty()) {
-            idx.pb(-1);
+            Result.pb(-1);
         }
         else {
             if (s.top().first > A[i]){
-                idx.pb(s.top().second);
+                Result.pb(s.top().second);
             }
             else {
                 while (s.empty() == false && s.top().first <= A[i]){
                     s.pop();
                 }
-                if (s.empty()) idx.pb(-1);
-                else idx.pb(s.top().second);
+                if (s.empty()) Result.pb(-1);
+                else Result.pb(s.top().second);
             }
         }
         s.push({A[i],i});
     }
     for (int i=0;i<N;i++){
-        Result.pb(i-idx[i]);
+        Result[i] = i - Result[i];
     }
     // ---------------------------------------
     // Brute Force
