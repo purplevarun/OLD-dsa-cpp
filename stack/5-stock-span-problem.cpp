@@ -15,14 +15,16 @@ int32_t main () {
     int N = A.size ();
     vi Result;
     // ---------------------------------------
+    
+    // ---------------------------------------
     // Brute Force
-    for (int i=0;i<N;i++) {
-        int count = 0;
-        for (int j=i;j>=0;j--) {
-            if (A[j] <= A[i]) count++;
-            else break;
-        }
-        Result.pb(count);
-    }
+    // for (int i=0;i<N;i++) {
+    //     int count = 0;
+    //     for (int j=i;j>=0;j--) {
+    //         if (A[j] <= A[i]) count++;
+    //         else break;
+    //     }
+    //     Result.pb(count);
+    // }
     if (Result == Answer) cout << "TC Passed";
 }
