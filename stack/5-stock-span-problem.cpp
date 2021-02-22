@@ -16,27 +16,17 @@ int32_t main () {
     int N = A.size ();
     vi Result;
     // ---------------------------------------
+    // USE : Nearest Greater to left. index of i - index of nearest greater to left.
     stack <int> s;
     for (int i=0;i<N;i++) {
-        if (s.empty()) Result.pb(1);
-        else {
-            if (s.top() > A[i]) Result.pb(1);
-            else {
-                int count = 0;
-                while (!s.empty() && s.top() <= A[i]){
-                    s.pop();
-                    count++;
-                }
-                Result.pb(count+1);
-            }
-        }
+        
         s.push(A[i]);
     }
     // ---------------------------------------
     // Brute Force
     // for (int i=0;i<N;i++) {
     //     int count = 0;
-    //     for (int j=i;j>=0;j--) {
+    //     for (int j=i;j>=0;j--) { // stack alert
     //         if (A[j] <= A[i]) count++;
     //         else break;
     //     }
