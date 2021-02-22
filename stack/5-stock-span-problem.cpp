@@ -14,7 +14,7 @@ int32_t main () {
     // IDEA : before any day, number of consecutive smaller or equal to days
     // vi A {100,80,60,70,60,75,85}; vi Answer {1,1,1,2,1,4,6}; // TC 1
     // vi A {1,2,3,4,5}; vi Answer {1,2,3,4,5}; // TC 2
-    vi A {5,4,3,2,1}; vi Answer {1,1,1,1,1}; // TC 3
+    // vi A {5,4,3,2,1}; vi Answer {1,1,1,1,1}; // TC 3
     int N = A.size ();
     vi Result;
     // ---------------------------------------
