@@ -7,8 +7,8 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 int32_t main () {
     // given : height of bars
-    vi A {6,2,5,4,5,1,6}; // TC 1 Answer = 12
-    // vi A {1,2,3,4,5}; // TC 2 Answer = 9
+    // vi A {6,2,5,4,5,1,6}; // TC 1 Answer = 12
+    vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
     vi Right; // to store index of nearest smallest to right
@@ -39,7 +39,7 @@ int32_t main () {
     }
     while (!s.empty()) s.pop(); // emptying stack
     // finding NSR indexes
-    pseudo_index = -1;
+    pseudo_index = N;
     for (int i=N-1;i>=0;i--){
         if (s.empty())
             Right.pb(pseudo_index);
@@ -55,13 +55,12 @@ int32_t main () {
         }
         s.push({A[i],i});
     }
+    reverse(all(Right));
     for (int i=0;i<N;i++){
         Width[i] = Right[i] - Left[i] - 1;
         Area[i] = Width[i] * A[i];
     }
-    for (int i:Right) cout << i << ","; cout << endl;
-    for (int i:Left) cout << i << ","; cout << endl;
-    for (int i:Width) cout << i << ",";
+    cout << *max_element(all(Area));
     // -------------------------
     // BRUTE FORCE
     // int maxArea=0;
