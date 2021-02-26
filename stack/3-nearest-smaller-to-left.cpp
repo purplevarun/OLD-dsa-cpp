@@ -12,7 +12,8 @@ using namespace std;
 int32_t main () {
     // vi A {4,5,2,10,8}; // TC 1 Answer = {-1,4,-1,2,2}
     // vi A {1,2,3,4,5}; // TC 2 Answer = {-1,1,2,3,4}
-    vi A {1,1,1,1};
+    // vi A {1,1,1,1};
+    vi A {6,2,5,4,5,1,6}; // 
     int N = A.size ();
     vi Result;
     //  ----------------------
