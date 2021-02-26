@@ -11,10 +11,32 @@ int32_t main () {
     vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
-    vi NSR(N); // to store index of nearest smallest to right
-    vi NSL(N); // to store index of nearest smallest to left
-    vi Result(N);
-
+    vi Right(N); // to store index of nearest smallest to right
+    vi Left(N); // to store index of nearest smallest to left
+    vi Width(N);
+    vi Area(N);
+    
+    stack <pair<int,int>> s;
+    for (int i=0;i<N;i++) {
+        if (s.empty()) {
+            Left.pb(-1);
+        }
+        else {
+            if (s.top().first < A[i]) {
+                Left.pb(s.top().first);
+            }
+            else {
+                while (s.empty()==false && s.top().first > A[i]) {
+                    s.pop();
+                }
+                if (s.empty()) Left.pb(-1);
+                else Left.pb(s.top().second);
+            }
+        }
+        s.push({A[i],i});
+    }
+    cout << "left indexes = " << endl;
+    for (int i:Left) cout << i << ", ";
     // -------------------------
     // BRUTE FORCE
     // int maxArea=0;
