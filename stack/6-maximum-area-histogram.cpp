@@ -39,7 +39,7 @@ int32_t main () {
     }
     while (!s.empty()) s.pop(); // emptying stack
     // finding NSR indexes
-    pseudo_index = N;
+    pseudo_index = -1;
     for (int i=N-1;i>=0;i--){
         if (s.empty())
             Right.pb(pseudo_index);
@@ -56,8 +56,12 @@ int32_t main () {
         s.push({A[i],i});
     }
     for (int i=0;i<N;i++){
-        
+        Width[i] = Right[i] - Left[i] - 1;
+        Area[i] = Width[i] * A[i];
     }
+    for (int i:Right) cout << i << ","; cout << endl;
+    for (int i:Left) cout << i << ","; cout << endl;
+    for (int i:Width) cout << i << ",";
     // -------------------------
     // BRUTE FORCE
     // int maxArea=0;
