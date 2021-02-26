@@ -13,8 +13,8 @@ int32_t main () {
     // -------------------------
     vi Right; // to store index of nearest smallest to right
     vi Left; // to store index of nearest smallest to left
-    vi Width;
-    vi Area;
+    vi Width(N); // to store eligible widths of each bar
+    vi Area(N); // to store area of each bar
     stack <pair<int,int>> s;
     int pseudo_index;
     // finding NSL indexes
@@ -39,14 +39,24 @@ int32_t main () {
     }
     while (!s.empty()) s.pop(); // emptying stack
     // finding NSR indexes
-    pseudo_index = N+1;
+    pseudo_index = N;
     for (int i=N-1;i>=0;i--){
         if (s.empty())
             Right.pb(pseudo_index);
         else {
-            
+            if (s.top().first < A[i])
+                Right.pb(s.top().second);
+            else {
+                while (s.empty()==false && s.top().first >= A[i])
+                    s.pop();
+                if (s.empty()) Right.pb(pseudo_index);
+                else Right.pb(s.top().second);
+            }    
         }
         s.push({A[i],i});
+    }
+    for (int i=0;i<N;i++){
+        
     }
     // -------------------------
     // BRUTE FORCE
