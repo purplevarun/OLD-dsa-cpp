@@ -11,10 +11,10 @@ int32_t main () {
     vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
-    vi Right(N); // to store index of nearest smallest to right
-    vi Left(N); // to store index of nearest smallest to left
-    vi Width(N);
-    vi Area(N);
+    vi Right; // to store index of nearest smallest to right
+    vi Left; // to store index of nearest smallest to left
+    vi Width;
+    vi Area;
     
     stack <pair<int,int>> s;
     for (int i=0;i<N;i++) {
@@ -23,10 +23,10 @@ int32_t main () {
         }
         else {
             if (s.top().first < A[i]) {
-                Left.pb(s.top().first);
+                Left.pb(s.top().second);
             }
             else {
-                while (s.empty()==false && s.top().first > A[i]) {
+                while (s.empty()==false && s.top().first >= A[i]) {
                     s.pop();
                 }
                 if (s.empty()) Left.pb(-1);
