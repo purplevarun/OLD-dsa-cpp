@@ -36,7 +36,7 @@ int32_t main () {
         s.push({A[i],i});
     }
     cout << "left indexes = " << endl;
-    for (int i:Left) cout << i << ", ";
+    for (int i:Left) cout << i << ", "; cout << endl;
     // -------------------------
     // BRUTE FORCE
     // int maxArea=0;
