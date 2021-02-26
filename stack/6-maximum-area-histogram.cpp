@@ -11,9 +11,10 @@ int32_t main () {
     vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
-    vi NSR; // to store index of nearest smallest to right
-    vi NSL; // to store index of nearest smallest to left
-    
+    vi NSR(N); // to store index of nearest smallest to right
+    vi NSL(N); // to store index of nearest smallest to left
+    vi Result(N);
+
     // -------------------------
     // BRUTE FORCE
     // int maxArea=0;
