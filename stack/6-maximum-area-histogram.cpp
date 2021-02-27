@@ -1,3 +1,7 @@
+/*
+    Stack Problem 6
+    Maximum Area Histogram
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
