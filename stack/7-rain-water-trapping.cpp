@@ -7,7 +7,8 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 int32_t main () {
     // vi A {3,0,0,2,0,4}; // TC 1 Answer = 10
-    vi A {0,1,0,2,1,0,1,3,2,1,2,1}; // TC 2 Answer = 6
+    // vi A {0,1,0,2,1,0,1,3,2,1,2,1}; // TC 2 Answer = 6
+    vi A {7,4,0,9}; // TC 3 Answer = 10
     int N = A.size ();
     // --------------------------------
     vi Left(N); // to store max element in left array
