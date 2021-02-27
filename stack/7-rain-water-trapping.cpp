@@ -1,3 +1,7 @@
+/*
+    Stack ? Not really
+    https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long int
