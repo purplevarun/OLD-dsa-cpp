@@ -64,6 +64,8 @@ int MAH (vi A){
     return *max_element(all(Area));
 }
 int32_t main () {
-    vi A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
-    cout << MAH(A[0]);
+    vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
+    for (auto i:A){
+        cout << MAH(i) << endl;
+    }
 }
