@@ -11,5 +11,5 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 int32_t main () {
-    vi A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}};
+    vi A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
 }
