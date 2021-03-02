@@ -1,4 +1,5 @@
 /*
+    ehhh.. no stack here till now..
     Rain Water Trapping
     https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1
 */
