@@ -64,8 +64,8 @@ int MAH (vi A){
     return *max_element(all(Area));
 }
 int32_t main () {
-    // vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
-    vector<vi> A {{1,1,1,1},{1,1,1,0}}; // TC 2 Answer = 
+    vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
+    // vector<vi> A {{1,1,1,1},{1,1,1,0}}; // TC 2 Answer = 
     int rows = A.size();
     int cols = A[0].size();
     int Max = -1e9;
