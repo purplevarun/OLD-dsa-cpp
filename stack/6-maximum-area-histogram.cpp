@@ -1,6 +1,7 @@
 /*
     Stack Problem 6
     Maximum Area Histogram
+    https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,8 +16,8 @@ int32_t main () {
     vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
-    vi Right; // to store index of nearest smallest to right
-    vi Left; // to store index of nearest smallest to left
+    vi Right(N); // to store index of nearest smallest to right
+    vi Left(N); // to store index of nearest smallest to left
     vi Width(N); // to store eligible widths of each bar
     vi Area(N); // to store area of each bar
     stack <pair<int,int>> s;
@@ -25,18 +26,18 @@ int32_t main () {
     pseudo_index = -1;
     for (int i=0;i<N;i++) {
         if (s.empty()) {
-            Left.pb(pseudo_index);
+            Left[i] = pseudo_index;
         }
         else {
             if (s.top().first < A[i]) {
-                Left.pb(s.top().second);
+                Left[i] = s.top().second;
             }
             else {
                 while (s.empty()==false && s.top().first >= A[i]) {
                     s.pop();
                 }
-                if (s.empty()) Left.pb(pseudo_index);
-                else Left.pb(s.top().second);
+                if (s.empty()) Left[i] = pseudo_index;
+                else Left[i] = s.top().second;
             }
         }
         s.push({A[i],i});
@@ -46,20 +47,19 @@ int32_t main () {
     pseudo_index = N;
     for (int i=N-1;i>=0;i--){
         if (s.empty())
-            Right.pb(pseudo_index);
+            Right[i] = pseudo_index;
         else {
             if (s.top().first < A[i])
-                Right.pb(s.top().second);
+                Right[i] = s.top().second;
             else {
                 while (s.empty()==false && s.top().first >= A[i])
                     s.pop();
-                if (s.empty()) Right.pb(pseudo_index);
-                else Right.pb(s.top().second);
+                if (s.empty()) Right[i] = pseudo_index;
+                else Right[i] = s.top().second;
             }    
         }
         s.push({A[i],i});
     }
-    reverse(all(Right));
     for (int i=0;i<N;i++){
         Width[i] = Right[i] - Left[i] - 1;
         Area[i] = Width[i] * A[i];
@@ -73,7 +73,7 @@ int32_t main () {
     //     int height = A[i];
     //     int j = i-1; // stack alert
     //     while (j>=0 && A[j]>=height){count++,j--;}
-    //     j=i+1;
+    //     j=i+1; // stack alert
     //     while (j<N && A[j]>=height){count++,j++;}
     //     int area = count*height;
     //     // cout << "A[i] = " << A[i] << " and Area = " << area << endl;
