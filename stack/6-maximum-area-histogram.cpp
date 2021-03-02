@@ -12,8 +12,8 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 int32_t main () {
     // given : height of bars
-    // vi A {6,2,5,4,5,1,6}; // TC 1 Answer = 12
-    vi A {1,2,3,4,5}; // TC 2 Answer = 9
+    vi A {6,2,5,4,5,1,6}; // TC 1 Answer = 12
+    // vi A {1,2,3,4,5}; // TC 2 Answer = 9
     int N = A.size();
     // -------------------------
     vi Right(N); // to store index of nearest smallest to right
