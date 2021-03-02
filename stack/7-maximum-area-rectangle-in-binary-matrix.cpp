@@ -65,7 +65,6 @@ int MAH (vi A){
 }
 int32_t main () {
     vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
-    for (auto i:A){
-        cout << MAH(i) << endl;
-    }
+    int rows = A.size();
+    int cols = A[0].size();
 }
