@@ -67,5 +67,18 @@ int32_t main () {
     vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
     int rows = A.size();
     int cols = A[0].size();
-    cout << rows << " " << cols ;
+    int Max = -1e9;
+    vi X(cols);
+    for (int i=0;i<rows;i++) {
+        for(int j=0;j<cols;j++) {
+            if (A[i][j] == 0) {
+                X[j] = 0;
+            }
+            else {
+                X[j] += A[i][j];
+            }
+        }
+        Max = max (Max,MAH(X));
+    }
+    cout << Max;
 }
