@@ -67,4 +67,5 @@ int32_t main () {
     vector<vi> A {{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}}; // TC 1 Answer = 8
     int rows = A.size();
     int cols = A[0].size();
+    cout << rows << " " << cols ;
 }
