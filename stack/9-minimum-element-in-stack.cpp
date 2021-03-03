@@ -33,7 +33,7 @@ int top (stack<int> &s) {
     else return minElement;
 }
 int pop (stack<int> &s) {
-    if (s.empty()) return;
+    if (s.empty()) return -1;
     if (s.top() >= minElement){
         int temp = s.top ();
         s.pop();
@@ -50,6 +50,9 @@ int pop (stack<int> &s) {
 int32_t main () {
     vi A {18, 19, 29, 15, 16}; // TC 1
     stack <int> s;
-    for (int i:A) push (s,i);
-    cout << getMin (s);
+    for (int i:A) {
+        push (s,i);
+        cout << getMin (s) << endl;
+    }
+    
 }
