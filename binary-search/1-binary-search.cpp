@@ -15,7 +15,7 @@ int32_t main () {
     int low = 0, high = N-1;
     int idx = -1;
     while (low <= high) {
-        int mid = (low+high)/2;
+        int mid = low + (high-low)/2; // prevents integer overflow
         if (A[mid] == target) {
             idx = mid;
             break;
