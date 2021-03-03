@@ -1,0 +1,1 @@
+1. Whenever given array is sorted, binary search can be applied.
