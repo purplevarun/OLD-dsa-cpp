@@ -54,6 +54,7 @@ int32_t main () {
         push (s,i);
     }
     pop(s);
+    pop(s);
     cout << getMin(s);
     
 }
