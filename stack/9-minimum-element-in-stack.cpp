@@ -9,13 +9,27 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 int minElement;
-stack <int> s;
-int getMin () {
+int getMin (stack<int> &s) {
     if (s.empty()) return -1;
     else return minElement;
 }
+void push (stack<int> &s,int x) {
+    if (s.empty()) {
+        s.push(x);
+        minElement = x;
+    }
+    else {
+        if (x >= minElement)
+            s.push (x);
+        else {
+            s.push (2*x - minElement);
+            minElement = x;
+        }
+    }
+}
 int32_t main () {
     vi A {}; // TC 1
-    // for (int i:A)
-    cout << minElement;
+    stack <int> s;
+    for (int i:A) push (s,i);
+    cout << getMin (s);
 }
