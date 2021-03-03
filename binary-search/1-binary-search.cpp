@@ -1,4 +1,6 @@
 /*
+    binary search question 1
+
     https://practice.geeksforgeeks.org/problems/who-will-win-1587115621/1 --- this is good
 
     https://leetcode.com/problems/binary-search/ -- but this is better
