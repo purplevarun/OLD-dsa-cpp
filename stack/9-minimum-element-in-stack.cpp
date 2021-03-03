@@ -27,8 +27,28 @@ void push (stack<int> &s,int x) {
         }
     }
 }
+int top (stack<int> &s) {
+    if (s.empty()) return -1;
+    if (s.top() >= minElement) return s.top();
+    else return minElement;
+}
+int pop (stack<int> &s) {
+    if (s.empty()) return;
+    if (s.top() >= minElement){
+        int temp = s.top ();
+        s.pop();
+        return temp;
+    }
+    else {
+        int flag = s.top();
+        s.pop();
+        int prevMin = minElement;
+        minElement = 2*minElement - flag;
+        return prevMin;
+    }
+}
 int32_t main () {
-    vi A {}; // TC 1
+    vi A {18, 19, 29, 15, 16}; // TC 1
     stack <int> s;
     for (int i:A) push (s,i);
     cout << getMin (s);
