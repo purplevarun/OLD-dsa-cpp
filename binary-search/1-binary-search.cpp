@@ -9,16 +9,16 @@ int32_t main () {
     vi A {1,2,3,4,5,6,7,8,9,10};
     int target = 8;
     int N = A.size();
-    int low = 0, high = N-1, mid;
+    int low = 0, high = N-1;
     int idx = -1;
     while (low <= high) {
-        mid = (low+high)/2;
+        int mid = (low+high)/2;
         if (A[mid] == target) {
             idx = mid;
             break;
         }
         else if (target < A[mid]){
-            high = mid;
+            high = mid-1;
             continue;
         }
         else if (target > A[mid]){
