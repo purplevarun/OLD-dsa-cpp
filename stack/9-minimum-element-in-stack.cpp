@@ -52,7 +52,8 @@ int32_t main () {
     stack <int> s;
     for (int i:A) {
         push (s,i);
-        cout << getMin (s) << endl;
     }
+    pop(s);
+    cout << getMin(s);
     
 }
