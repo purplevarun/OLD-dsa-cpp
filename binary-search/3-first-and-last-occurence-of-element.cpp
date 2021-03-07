@@ -10,5 +10,6 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 int32_t main () {
+    vi A {2,4,10,10,10,18,20}; // TC 1 Answer = 2,4
     
 }
