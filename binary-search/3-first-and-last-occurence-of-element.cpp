@@ -35,7 +35,7 @@ int32_t main () {
         int mid = low + (high - low)/2;
         if (X == A[mid]) {
             last = mid;
-            end = mid+1;
+            low = mid+1;
         }
         else if (X < A[mid]) {
             high = mid-1;
