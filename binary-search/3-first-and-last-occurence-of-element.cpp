@@ -1,5 +1,6 @@
 /*
     Author : Varun Kedia - purplevarun@gmail.com
+    https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
 */
 #include <bits/stdc++.h>
 using namespace std;
