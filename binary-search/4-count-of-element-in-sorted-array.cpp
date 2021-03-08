@@ -1,5 +1,6 @@
 /*
     Author : Varun Kedia - purplevarun@gmail.com
+    https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1
 */
 #include <bits/stdc++.h>
 using namespace std;
