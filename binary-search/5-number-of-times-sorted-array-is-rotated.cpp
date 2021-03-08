@@ -9,5 +9,5 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(),x.end()
 int32_t main () {
-    
+    vi A {8,10,12,15,2,4,6}; // Answer = 3
 }
