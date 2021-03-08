@@ -14,5 +14,8 @@ int32_t main () {
     
     int first = -1, last = -1, high, low, N = A.size();
     low = 0, high = N-1;
-    
+    while (low <= high) {
+        int mid = low + (high-low)/2;
+        
+    }
 }
