@@ -10,29 +10,34 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 int32_t main()
 {
-    vi A{8, 10, 12, 15, 2, 4, 6}; // Answer = 3
+    // vi A{8, 10, 12, 15, 2, 4, 6}; // Answer = 3
+    vi A{3,4,5,6,1,2}; // Answer = 2
     // find index of smallest element using BS
     int N = A.size();
     int low = 0, high = N-1;
-    int ans;
+    int ans = -1;
     while (low <= high) {
+        if (low == high) {
+            ans = low;
+            break;
+        }
         int mid = low + (high - low) / 2;
-        
-        int previous = (mid+N-1)%N;
-        int next = (mid+1)%N;
-
-        if (A[mid] <= A[previous] && A[mid] <= A[next]){
+        if (mid < high && A[mid+1] < A[mid]){
+            ans = mid+1;
+            break;
+        }
+        if (mid > low && A[mid] < A[mid-1]){
             ans = mid;
             break;
         }
-        if (A[mid] > A[low]) {
-            // means this part is sorted
-            low = mid+1;
-        }
-        else if (A[mid] < A[high]) {
-            // means this part is sorted
+        if (A[high] > A[mid]) {
             high = mid-1;
+            continue;
         }
-    }
+        if (A[low] < A[mid]) {
+            low = mid+1;
+            continue;
+        }
+    }    
     cout << ans;
 }
