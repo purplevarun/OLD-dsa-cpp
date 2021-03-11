@@ -1,5 +1,6 @@
 /*
     Author : Varun Kedia - purplevarun@gmail.com
+    https://practice.geeksforgeeks.org/problems/rotation4723/1
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -10,12 +11,13 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 int32_t main()
 {
-    // vi A{8, 10, 12, 15, 2, 4, 6}; // Answer = 3
-    vi A{3,4,5,6,1,2}; // Answer = 2
+    vi A{10, 12, 15, 2, 4, 6,8}; // Answer = 3
+    // vi A{3,4,5,6,1,2}; // Answer = 4
+
     // find index of smallest element using BS
     int N = A.size();
     int low = 0, high = N-1;
-    int ans = -1;
+    int ans = 0;
     while (low <= high) {
         if (low == high) {
             ans = low;
