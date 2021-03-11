@@ -17,15 +17,22 @@ int32_t main()
     int ans;
     while (low <= high) {
         int mid = low + (high - low) / 2;
-        if (A[mid] < A[mid-1] && A[mid] < A[mid+1]){
+        
+        int previous = (mid+N-1)%N;
+        int next = (mid+1)%N;
 
+        if (A[mid] <= A[previous] && A[mid] <= A[next]){
+            ans = mid;
+            break;
         }
         if (A[mid] > A[low]) {
             // means this part is sorted
+            low = mid+1;
         }
         else if (A[mid] < A[high]) {
             // means this part is sorted
-
+            high = mid-1;
         }
     }
+    cout << ans;
 }
