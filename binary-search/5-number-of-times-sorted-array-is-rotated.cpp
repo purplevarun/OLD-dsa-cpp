@@ -11,6 +11,8 @@ using namespace std;
 int32_t main()
 {
     vi A{8, 10, 12, 15, 2, 4, 6}; // Answer = 3
-    // find index of smallest element
+    // find index of smallest element using BS
+    int N = A.size();
+    int low = 0, high = N-1;
     
 }
