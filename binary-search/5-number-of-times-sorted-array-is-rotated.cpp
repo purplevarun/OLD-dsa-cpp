@@ -14,5 +14,18 @@ int32_t main()
     // find index of smallest element using BS
     int N = A.size();
     int low = 0, high = N-1;
-    
+    int ans;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (A[mid] < A[mid-1] && A[mid] < A[mid+1]){
+
+        }
+        if (A[mid] > A[low]) {
+            // means this part is sorted
+        }
+        else if (A[mid] < A[high]) {
+            // means this part is sorted
+
+        }
+    }
 }
