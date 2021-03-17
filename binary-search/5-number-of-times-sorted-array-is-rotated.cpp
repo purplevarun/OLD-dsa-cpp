@@ -24,6 +24,7 @@ int32_t main()
             break;
         }
         int mid = low + (high - low) / 2;
+        
         if (mid < high && A[mid+1] < A[mid]){
             ans = mid+1;
             break;
