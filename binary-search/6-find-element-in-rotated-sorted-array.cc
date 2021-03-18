@@ -18,7 +18,7 @@ int findElementInRotatedArray(vi A,int X){
             if (A[mid] < X && X <= A[high]) low = mid+1;
             else high = mid-1;
         }
-        else if {
+        else {
             if (A[mid] > X && X >= A[low]) high = mid-1;
             else low = mid+1;
         }
@@ -27,7 +27,7 @@ int findElementInRotatedArray(vi A,int X){
 }
 int32_t main () {
     vi A {11,12,15,18,2,5,6,8};
-    int X = 5;
+    int X = 15;
 
-               
+    cout << findElementInRotatedArray(A,X);           
 }
