@@ -27,8 +27,8 @@ int32_t main () {
     // int N = 7; vi A {2,3}; // TC 1 Answer = {3,2,2}
     // int N = 9; vi A {2,4}; // TC 2 Answer = Not Possible
     // int N = 300; vi A {7,14}; // TC 3 Answer = Not Possible
-    int N = 100; vi A {2,48,1,3}; // TC 4 Answer = {48,48,3,1}
-    // int N = 50; vi A {1,3}; // TC 5
+    // int N = 100; vi A {2,48,1,3}; // TC 4 Answer = {48,48,3,1}
+    int N = 50; vi A {1,3}; // TC 5
     sort (all(A)); reverse (all(A));
     vi result = howSum (N,A);
     reverse (all(result));

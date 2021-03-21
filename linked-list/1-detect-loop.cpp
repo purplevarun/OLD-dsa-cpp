@@ -36,3 +36,4 @@ int32_t main () {
     if (loop) cout << "There is loop";
     else cout << "No loop";
 }
+
