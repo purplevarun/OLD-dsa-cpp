@@ -9,6 +9,7 @@ int solve (vi A) {
 }
 int32_t main (){
     // compare X with mid - 1, mid, mid + 1
-    vi A {};
+    vi A {10, 3, 40, 20, 50, 80, 70};
+    int X = 40;
     cout << solve (A);
 }
