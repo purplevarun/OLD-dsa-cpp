@@ -26,7 +26,6 @@ int findElementInRotatedArray(vi A,int X){
 }
 int32_t main () {
     vi A {11,12,15,18,2,5,6,8};
-    int X = 15;
-
+    int X = 12;
     cout << findElementInRotatedArray(A,X);           
 }
