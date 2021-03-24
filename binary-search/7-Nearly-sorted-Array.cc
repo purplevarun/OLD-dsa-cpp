@@ -14,8 +14,8 @@ int solve (vi A, int X) {
         if (A[mid] == X) return mid;
         if (mid-1 >= low && A[mid-1]==X) return mid-1;
         if (mid+1 <= high && A[mid+1]==X) return mid+1;
-        if (X > A[mid]) low = mid+1;
-        if (X < A[mid]) high = mid-1;
+        if (X > A[mid]) low = mid+2;
+        if (X < A[mid]) high = mid-2;
     }
     return -1;
 }
