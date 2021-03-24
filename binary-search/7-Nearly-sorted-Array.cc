@@ -10,5 +10,5 @@ int solve () {
 }
 int32_t main (){
     // compare X with mid - 1, mid, mid + 1
-
+    
 }
