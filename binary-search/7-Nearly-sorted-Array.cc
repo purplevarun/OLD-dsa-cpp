@@ -22,6 +22,6 @@ int solve (vi A, int X) {
 int32_t main (){
     // compare X with mid - 1, mid, mid + 1
     vi A {10, 3, 40, 20, 50, 80, 70};
-    int X = 70;
+    int X = 3;
     cout << solve (A, X);
 }
