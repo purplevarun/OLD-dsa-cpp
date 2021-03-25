@@ -5,7 +5,7 @@ using namespace std;
 #define pb push_back
 int solve (vi A, int X) {
 	int N = A.size();
-	return 0;
+	return N;
 }
 int32_t main () {
 	// floor of a number is greatest element
@@ -13,6 +13,7 @@ int32_t main () {
 	vi A {1,2,8,10,10,12,19};
 	int X = 5;
 	int Output = 2;
+	cout << solve(A,X) << endl;
 	if (solve(A,X) == Output)
 		cout << "Test Case Passed" << endl;
 	else cout << "Test Case Failed" << endl;
