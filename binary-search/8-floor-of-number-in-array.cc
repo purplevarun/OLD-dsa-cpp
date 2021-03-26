@@ -8,7 +8,10 @@ int solve (vi A, int X) {
 	int low = 0, high = N-1;
 	while (low <= high) {
 		int mid = low + (high - low)/2;
-
+		if (X == A[mid]) {
+			return mid;
+		}
+		if ()
 	}
 	return N;
 }
