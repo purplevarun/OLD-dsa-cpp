@@ -6,14 +6,21 @@ using namespace std;
 int solve (vi A, int X) {
 	int N = A.size();
 	int low = 0, high = N-1;
+	int res;
 	while (low <= high) {
 		int mid = low + (high - low)/2;
 		if (X == A[mid]) {
 			return mid;
 		}
-		if ()
+		if (X > A[mid]) {
+			res = mid;
+			low = mid+1;
+		}
+		if (X < A[mid]) {
+			high = mid-1;
+		}
 	}
-	return N;
+	return res;
 }
 int32_t main () {
 	// floor of a number is greatest element
