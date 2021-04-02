@@ -4,12 +4,12 @@ using namespace std;
 #define int int64_t
 #define vi vector <int>
 int Ugly (int N) {
-    int ugly[n];
+    int ugly[N];
     int i2 = 0, i3 = 0, i5 = 0;
     int nextugly = 1;
     int next2 = 2, next3 = 3, next5 = 5;
     ugly[0] = 1;
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < N; i++) {
         nextugly = min(next2, min(next3, next5));
         ugly[i] = nextugly;
         if (nextugly == next2) {
@@ -28,6 +28,6 @@ int Ugly (int N) {
     return nextugly;    
 }
 int32_t main (){
-    int N = 150; // 
-
+    int N = 150; // 5832
+    cout << Ugly(N) << endl;
 }
