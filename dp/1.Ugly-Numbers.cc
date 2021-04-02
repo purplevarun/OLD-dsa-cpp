@@ -1,4 +1,5 @@
 // find Nth Ugly number using DP
+// https://practice.geeksforgeeks.org/problems/ugly-numbers2254/1
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
