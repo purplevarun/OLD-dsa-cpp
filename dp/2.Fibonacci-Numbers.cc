@@ -16,10 +16,5 @@ int fibo (int N) {
 }
 int32_t main (){
     int N = 50;
-    // cout << fibo (N) << endl;    
-    bigint a(10);
-    bigint b(5);
-    bigint c = a.substract(b);
-    cout << c.print() << endl;
-    
+    cout << fibo (N) << endl;    
 }
