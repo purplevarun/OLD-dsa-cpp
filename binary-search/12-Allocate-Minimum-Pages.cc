@@ -11,11 +11,10 @@ bool isValid (vi A, int K, int Max) {
             students ++;
             sum = A[i];
         }
+        if (students > K)
+            return false;
     }
-    if (students == K)
-        return true;
-    else
-        return false;
+    return true;
 }
 int solve (vi A, int K) {
     if (K > A.size())
