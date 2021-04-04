@@ -37,7 +37,7 @@ int solve (vi A){
 }
 int32_t main()
 {
-    vi A{10, 12, 15, 2, 4, 6,8}; // Answer = 3
+    vi A{10, 12, 15, 2, 4, 6,8};// Answer = 3
     // vi A{3,4,5,6,1,2}; // Answer = 4
 
     // find index of smallest element using BS
