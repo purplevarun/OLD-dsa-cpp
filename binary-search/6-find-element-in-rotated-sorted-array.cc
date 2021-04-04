@@ -33,15 +33,25 @@ int minElementIndex (vi A){
     return ans;
 }
 int binarysearch (vi A, int low, int high, int X){
-    if (low <= high){
-        
+    while (low <= high){
+        int mid = low + (high-low)/2;
+        if (X == A[mid])
+            return mid;
+        if (X > A[mid])
+            low = mid + 1;
+        if (X < A[mid])
+            high = mid - 1;
     }
     return -1;
 }
 int findElementInRotatedArray(vi A,int X){
     int index = minElementIndex (A);
+    int left = binarysearch(A,0,index-1,X);
+    int right = binarysearch(A,index,A.size()-1,X);
     
-    
+    if (left==-1)
+        return right;
+    return left;
 }
 int32_t main () {
     vi A {11,12,15,18,2,5,6,8};
