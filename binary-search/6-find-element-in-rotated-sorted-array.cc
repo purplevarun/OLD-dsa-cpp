@@ -6,7 +6,13 @@ using namespace std;
 int minElementIndex (vi A){
     int low = 0, high = A.size()-1;
     while (low <= high) {
+        if (low == high) return low;
         int mid = low + (high-low)/2;
+        if (A[mid] < A[mid-1])
+            return mid;
+        if (A[mid+1] < A[mid])
+            return mid+1;
+        
     }
 }
 int findElementInRotatedArray(vi A,int X){
