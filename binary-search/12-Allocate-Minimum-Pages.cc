@@ -2,10 +2,20 @@
 using namespace std;
 #define int int64_t
 #define vi vector <int>
-bool isValid (vi A, int low, int high,int K) {
+bool isValid (vi A, int K, int Max) {
     int students = 1;
     int sum = 0;
-    
+    for (int i=0;i<A.size();i++){
+        sum += A[i];
+        if (sum > Max)[
+            students ++;
+            sum = A[i];
+        ]
+    }
+    if (students == K)
+        return true;
+    else
+        return false;
 }
 int solve (vi A, int K) {
     if (K > A.size())
@@ -15,7 +25,7 @@ int solve (vi A, int K) {
     int result = -1;
     while (low <= high) {
         int mid = low + (high-low)/2;
-        if (isValid ()){
+        if (isValid (A, K, mid)){
             result = mid;
             high = mid - 1;
         }
