@@ -33,7 +33,10 @@ int minElementIndex (vi A){
     return ans;
 }
 int binarysearch (vi A, int low, int high, int X){
-    
+    if (low <= high){
+        
+    }
+    return -1;
 }
 int findElementInRotatedArray(vi A,int X){
     int index = minElementIndex (A);
