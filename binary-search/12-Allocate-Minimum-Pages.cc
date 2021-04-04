@@ -7,10 +7,10 @@ bool isValid (vi A, int K, int Max) {
     int sum = 0;
     for (int i=0;i<A.size();i++){
         sum += A[i];
-        if (sum > Max)[
+        if (sum > Max){
             students ++;
             sum = A[i];
-        ]
+        }
     }
     if (students == K)
         return true;
@@ -33,8 +33,10 @@ int solve (vi A, int K) {
             low = mid + 1;
         }
     }
+    return result;
 }
 int32_t main (){
     vi A {10,20,30,40};
     int K = 2;
+    cout << solve (A,K) << endl;
 }
