@@ -33,7 +33,7 @@ int solve (vi A){
             continue;
         }
     }    
-    return -1;
+    return 0;
 }
 int32_t main()
 {
