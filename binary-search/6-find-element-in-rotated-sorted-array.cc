@@ -9,11 +9,13 @@ int findElementInRotatedArray(vi A,int X){
         int mid = low + (high - low)/2;
         if (A[mid] == X) return mid;
 
-        if (A[low] < A[high]) { // normal binary search
+        if (A[low] < A[high]) { \
+            // perform normal binary search
             if (A[mid] > X) high = mid-1;
             else low = mid+1;
         }
         else if (A[mid] < A[low]) {
+            // 
             if (A[mid] < X && X <= A[high]) low = mid+1;
             else high = mid-1;
         }
