@@ -4,7 +4,10 @@ using namespace std;
 #define vi vector<int>
 #define pb push_back
 int minElementIndex (vi A){
-    
+    int low = 0, high = A.size()-1;
+    while (low <= high) {
+        int mid = low + (high-low)/2;
+    }
 }
 int findElementInRotatedArray(vi A,int X){
     int index = minElementIndex (A);
