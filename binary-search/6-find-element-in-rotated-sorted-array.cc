@@ -4,6 +4,7 @@ using namespace std;
 #define vi vector<int>
 #define pb push_back
 int minElementIndex (vi A){
+    int N = A.size();
     int low = 0, high = N-1;
     int ans = 0;
     while (low <= high) {
