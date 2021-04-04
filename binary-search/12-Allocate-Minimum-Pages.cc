@@ -1,3 +1,5 @@
+// Allocate Minimum Number of Pages
+// https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 #include <bits/stdc++.h>
 using namespace std;
 #define int int64_t
