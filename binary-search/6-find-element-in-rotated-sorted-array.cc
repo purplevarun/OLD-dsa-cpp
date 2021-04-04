@@ -12,8 +12,12 @@ int minElementIndex (vi A){
             return mid;
         if (A[mid+1] < A[mid])
             return mid+1;
-        
+        if (A[high] > A[mid])
+            high = mid - 1;
+        if (A[low] < A[mid])
+            return low + 1;
     }
+    return -1;
 }
 int findElementInRotatedArray(vi A,int X){
     int index = minElementIndex (A);
